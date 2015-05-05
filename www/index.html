@@ -27,6 +27,8 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/handlebars-v3.0.1.js"></script>
         <title>Hello World</title>
     </head>
     <body>
@@ -36,6 +38,24 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
+            
+            <div id="subscreen">This is where we display the subscreens created using the handlebar templates below</div>
+            <input class='screen1-key' value="Scr1" type="button"/>
+            <input class='screen2-key' value="Scr2" type="button"/>
+            
+            <script id="scr1" type="text/x-handlebars-template">
+                <div class='header'>
+                    <h1>This is SCREEN 1</h1>
+                    <ul><li>1</li><li>2</li><li>3</li></ul>
+                </div>
+                
+            </script>
+            
+            <script id="scr2" type="text/x-handlebars-template">
+                <div class='header'><h1>This is SCREEN 2</h1></div>
+                <ol><li>1</li><li>2</li><li>3</li></ol>
+            </script>
+            
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
