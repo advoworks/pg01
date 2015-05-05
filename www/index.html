@@ -38,7 +38,16 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div data-role="page" id="page_main">
+        <div data-role="page">
+            
+            <div data-role="header">
+                <h1>Placeholder for handlebar pages</h1>
+            </div>
+            
+        </div>
+        
+        
+        <script id="page_main" type="text/x-handlebars-template">
             <div data-role="header">
                 <h1>PriceBuddy</h1>
             </div>
@@ -74,27 +83,43 @@
             <div data-role="footer">
                 <h4>My Footer</h4>
             </div><!-- /footer -->
+        </script>
+        
+        <script id="page_createproduct" type="text/x-handlebars-template">
+            <div data-role="header">
+                <h1>Create Product</h1>
+            </div>
             
-      
-            
-            
-
-            
-            
-            <script id="scr1" type="text/x-handlebars-template">
-                <div class='header'>
-                    <h1>This is SCREEN 1</h1>
-                    <ul><li>1</li><li>2</li><li>3</li></ul>
-                </div>
+            <div data-role="content">
+                <p>Create Product</p>
                 
-            </script>
+
+                <ul data-role="listview" data-inset="true" data-filter="true">
+                    <li><a href="#">Acura</a></li>
+                    <li><a href="#">Audi</a></li>                    
+                </ul>
+                
+                <form>
+                    <label for="slider-0">Input slider:</label>
+                    <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
+                </form>
+    
+            </div><!-- /content -->
             
-            <script id="scr2" type="text/x-handlebars-template">
-                <div class='header'><h1>This is SCREEN 2</h1></div>
-                <ol><li>1</li><li>2</li><li>3</li></ol>
-            </script>
+            <div data-role="footer">
+                <h4>Footer for create product</h4>
+            </div><!-- /footer -->
             
-        </div>
+        </script>
+            
+        <script id="scr2" type="text/x-handlebars-template">
+   
+        </script>
+            
+            
+        
+        
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         
