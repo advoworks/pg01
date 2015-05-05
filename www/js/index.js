@@ -34,6 +34,13 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+        //START - PG01 Custom Code
+        alert("ondeviceready!");
+        $('#button_createproduct').on('click', alert("click"));
+        //END - PG01 Custom Code
+        
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
