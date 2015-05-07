@@ -18,14 +18,21 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() { alert ("1 initialize!");
+    initialize: function() {  alert ("init");
         this.bindEvents();
+        
+        //Kev add handlebars stuff
+        this.page_main = Handlebars.compile($("#page_main").html());
+        //this.screen2 = Handlebars.compile($("#scr2").html());
+        
     },
+    
+    
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() { alert ("2 bindEvents!");
+    bindEvents: function() {  alert ("bindEvents");
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -33,11 +40,14 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-
+        alert('onDeviceReady!!!');
         
         //START - PG01 Custom Code
-        alert("3 ondeviceready!");
-        $('#button_createproduct').on('click', alert("click"));
+        alert("gonna display main page");
+        $('#canvas').html(app.page_main());
+        //$('#canvas').html("hello");
+        alert("done displaying main page");
+        $('#button_createproduct').on('click', app.displaypage_createproduct);
         //END - PG01 Custom Code
         
         
@@ -47,6 +57,10 @@ var app = {
 
         //
         //console.log('Received Event: ' + id);
+    },
+    
+    displaypage_createproduct: function () {
+        alert ("You are opening the create product page");
     }
     
     
