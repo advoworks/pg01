@@ -38,89 +38,114 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div id="canvas">
-            <div data-role="page">
-            
-                <div data-role="header">
-                    <h1>Placeholder for handlebar pages</h1>
-                </div>
-                
-            </div>
-        </div>
         
-        
-        
-        <script id="page_main" type="text/x-handlebars-template">
-            <div data-role="page">
-                <div data-role="header">
-                    <h1>PriceBuddy</h1>
-                </div>
-                
-                <div data-role="content">
-                    <p>Please choose an option</p>
-                    
-                    <a href="#" data-role="button" data-icon="action" id="button_createproduct">Create Product</a>
-                    <a href="#" data-role="button" data-icon="search">Search Product</a>
-                    <a href="#" data-role="button" data-icon="gear">User Settings</a>
-                    <a href="#" data-role="button" data-icon="delete" data-theme="b">Exit App</a>
-                    
-                    <ul data-role="listview" data-inset="true" data-filter="true">
-                        <li><a href="#">Acura</a></li>
-                        <li><a href="#">Audi</a></li>
-                        <li><a href="#">BMW</a></li>
-                        <li><a href="#">Cadillac</a></li>
-                        <li><a href="#">Ferrari</a></li>
-                        
-                    </ul>
-                    
-                    <form>
-                        <label for="slider-0">Input slider:</label>
-                        <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
-                    </form>
-                    
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-inline="true">A</button>
-                    <button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme b" data-inline="true">B</button>
-                    <button class="hide-page-loading-msg" data-inline="true" data-icon="delete">Hide</button>
-                    
-                </div><!-- /content -->
-                
-                <div data-role="footer">
-                    <h4>My Footer</h4>
-                </div><!-- /footer -->
-            </div>
-        </script>
-        
-        <script id="page_createproduct" type="text/x-handlebars-template">
+        <div data-role="page" id="page_00">
             <div data-role="header">
-                <h1>Create Product</h1>
+                <h1>PriceBuddy</h1>
             </div>
             
             <div data-role="content">
-                <p>Create Product</p>
-                
+                <p>Please choose an option</p>
+                <a href="#" data-role="button" data-icon="action" id="btn_gotopage_createproduct">Create Product</a>
+                <a href="#" data-role="button" data-icon="search" id="btn_gotopage_searchproduct">Search Product</a>
+                <a href="#" data-role="button" data-icon="gear" id="btn_gotopage_userprofile">User Profile</a>
+                <a href="#" data-role="button" data-icon="delete" id="btn_gotopage_exit" data-theme="b">Exit</a>
 
+                
                 <ul data-role="listview" data-inset="true" data-filter="true">
                     <li><a href="#">Acura</a></li>
-                    <li><a href="#">Audi</a></li>                    
+                    <li><a href="#">Audi</a></li>
+                    <li><a href="#">BMW</a></li>
+                    <li><a href="#">Cadillac</a></li>
+                    <li><a href="#">Ferrari</a></li>
+                    
                 </ul>
                 
                 <form>
                     <label for="slider-0">Input slider:</label>
                     <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
                 </form>
+                
+                <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-inline="true">A</button>
+                <button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme b" data-inline="true">B</button>
+                <button class="hide-page-loading-msg" data-inline="true" data-icon="delete">Hide</button>
+                
+            </div><!-- /content -->
+            
+            <div data-role="footer">
+                <h4>My Footer</h4>
+            </div><!-- /footer -->
+        </div>
+        
+        
+        
+        <div data-role="page" id="page_01">
+            <div data-role="header">
+                <a href="#page_00" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a>   
+                <h1>Create Product</h1>
+            </div>
+            
+            <div data-role="content">
+                <p>Barcode scanner here</p>
+                
+                <script id="hb_template" type="text/x-handlebars-template">
+                    This text is from the handlebar template
+                </script>
     
             </div><!-- /content -->
             
             <div data-role="footer">
-                <h4>Footer for create product</h4>
+                <h4>Footer 01</h4>
             </div><!-- /footer -->
+        </div>
+        
+        <div data-role="page" id="page_02">
+            <div data-role="header">
+                <a href="#page_00" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a>   
+                <h1>Search Product</h1>
+            </div>
             
-        </script>
+            <div data-role="content">
+                <p>This is the Search Product page</p>
+            </div><!-- /content -->
             
-        <script id="scr2" type="text/x-handlebars-template">
-   
-        </script>
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div><!-- /footer -->
+        </div>
+        
+        <div data-role="page" id="page_03">
+            <div data-role="header">
+                <a href="#page_00" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a>   
+                <h1>User Profile</h1>
+            </div>
             
+            <div data-role="content">
+                <p>Your rewards and settings are displayed</p>
+            </div><!-- /content -->
+            
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div><!-- /footer -->
+        </div>
+        
+        <div data-role="page" id="page_04">
+            <div data-role="header">
+                <a href="#page_00" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a>   
+                <h1>Exit?</h1>
+            </div>
+            
+            <div data-role="content">
+                <p>This is the Exit page</p>
+            </div><!-- /content -->
+            
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div><!-- /footer -->
+        </div>
+    
+            
+
             
         
         
